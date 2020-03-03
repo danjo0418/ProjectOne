@@ -1,0 +1,322 @@
+@media (max-width: 1024px) {
+	.languagetrans {
+		display:none !important;
+	}
+
+	.languagetrans {
+		right:400px;
+	}
+
+	#dashboard .container {
+	    max-width: 100% !important;
+	}
+
+	.container2 {
+		width: 100%!important;
+	}
+
+	#dashboard {
+		padding: 0 !important;
+	}
+
+	#dashboard .col-md-2, #dashboard .col-md-10 {
+		flex: 0 0 100% !important;
+    	max-width: 100% !important;
+	}
+
+	#dashboard aside {
+		min-height: 0;
+	}
+	
+	#dashboard aside ul.mainmenu {
+		text-align: center;
+	}
+
+	#dashboard aside ul.mainmenu li {
+	    display: inline-block;
+	}
+}
+
+@media (min-width: 768px) {
+	.carousel-multi-item-2 .col-md-3 {
+		float: left;
+		width: 25%;
+		max-width: 100%; 
+	} 
+}
+
+@media (max-width: 992px) {
+	.ListCell-wrap .col-md-11 {
+	    -ms-flex: 0 0 100% !important;
+	    flex: 0 0 100% !important;
+	    max-width: 100% !important;
+	}
+}
+
+@media (max-width: 768px) {
+	button.navbar-toggler {
+		position: relative;
+		z-index: 9;;
+	}
+
+	nav#myheader li a.navbar-brand {
+		position: relative;
+		z-index: 1;
+	}
+
+	.cinfo, .footerlinks, .followus, .footerlogo {
+		float:none;
+		margin:0 auto;
+		text-align: center;
+		width:100%;
+		padding:0 0 15px 0;
+	}
+
+	.languagetrans {
+		right:500px;
+	}
+
+	.properties img {
+		height:auto !important;
+	}
+
+	.reslog {
+		position: absolute;
+		right:0;
+		top:7px;
+	}
+
+	.reslog a {
+	    display: inline-block;
+	}
+
+	ul.navbar-nav li:first-child {
+		position: absolute;
+		top:0;
+		right:0;
+		left:0;
+		margin: 0 auto;
+		text-align:Center;	
+		display:block;
+	}
+
+	ul.navbar-nav li:first-child img {
+		width:50%;
+	}
+
+	.footerlinks ul {
+		float:none !important;
+	}
+
+	.footerlinks ul li {
+		text-align:center !important;
+	}
+
+	.whitebox.float-right {
+		float:none !important;
+		margin:0 auto;
+	}
+
+	.controls-left {
+		top:45px !important;
+	}
+
+	.footerline {
+		display:none;
+	}
+
+	nav#myheader ul {
+		width: 100%;
+	}
+
+	nav#myheader li {
+		display:block;
+		padding: 0 20px;
+	}
+
+	nav#myheader li div.dropdown-menu {
+	    border: none;
+	    padding: 0 15px;
+	    background: transparent;
+	}
+
+	#slider {
+		width: 100%;
+	}
+
+	.text-center-sm {
+		text-align: center;
+	}
+
+	.propertynav {
+		padding:15px;
+	}
+}
+
+
+@media (max-width: 767px) {
+	h1 {
+		font-size: 25px;
+	}
+
+	ol.breadcrumb li {
+	    width: 100%;
+	    display: block;
+	}
+
+	.breadcrumb-item+.breadcrumb-item::before {
+	    content: " ";
+	}
+
+	.breadcrumb-item+.breadcrumb-item::before {
+	    padding-right:0;
+	}
+
+	.s-input input {
+	    width: 100% !important;
+	}
+
+	.unset-float {
+		float: unset !important;
+	}
+
+	.bs-filter-button {
+		display: block;
+		width: 100%; 
+	}
+
+	.bs-filter-form {
+		display: none;
+		border: 1px solid #ffbf00;
+	    border-radius: 5px;
+	    margin-bottom: 40px;
+	}
+
+	.bs-filter-form .mr-5 {
+		margin-right: 0 !important;
+	}
+
+	#dashboard aside ul.mainmenu {
+		text-align: left;
+	}
+
+	#dashboard aside ul.mainmenu li {
+	    display: block;
+	}
+
+	.ListCell-img, .ListCell-info {
+	    width: 100% !important;
+	}
+
+	.ListCell-info ul li {
+	    width: 100% !important;
+	}
+
+	.ListCell-info small {
+	    display: none;
+	}
+
+	.ListCell-info  {
+		text-align: center !important;
+	}
+
+	.ListCell-info p.view-btn a {
+		width: 50%;
+		margin: 10px 0;
+	}
+}
+
+
+@media (max-width: 414px) {
+
+	.container2 {
+		width:100% !important;
+	}
+
+	ul.navbar-nav li:first-child img {
+		width:100%;
+		margin:0 auto;
+	}
+
+	nav#myheader li a.navbar-brand {
+		margin:0 auto;
+	}
+	.navbar span.telmob, .navbar span.emailmob {
+		display:none;
+	}
+
+	header a.navbar-brand img{
+		width: 50%;
+	}
+
+	.pcont {
+		padding-top:15px;
+	}
+
+	.banner .whitebox {
+		width:100%;
+	}
+
+	.proplistprice {
+		width:92%;
+	}
+
+	.prelative {
+		padding:0 15px !important;
+	}
+
+	.feature .card-body {
+		padding:20px 30px !important;
+	}
+
+	#multi-item-example {
+		display:none !important;
+	}
+
+	.btnmobile {
+		width:100% !important;
+	}
+
+	.navbar-nav .dropdown-menu {
+		padding:0 0 0 10px !important;
+	}
+
+	.signinacct {
+		padding-top:50px !important;
+	}
+
+	.titlemob.float-left {
+		float:none !important;
+		text-align: center;
+	}
+
+	.headprofile {
+		text-align:center;
+	}
+
+	.agent-contact {
+		font-size:13px;
+	}
+
+	.s-input {
+		width: 88%;
+	}
+
+	.s-button {
+		width: 10%;
+	}
+
+	.propertycontent .container {
+		overflow: hidden;
+		padding:0 10px !important;
+	}
+
+	.signinacct form {
+		width:95% !important;
+	}
+
+	ul.navbar-nav li:first-child{
+		position:static !important;
+	}
+
+}
