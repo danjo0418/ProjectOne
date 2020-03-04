@@ -65,11 +65,6 @@ class SiteController extends Controller
         return view('property.sellproperties');
     }
 
-    public function resources()
-    {
-        return view('resources.index');
-    }
-
     public function contactUs()
     {
          return view('contact.index');
@@ -111,4 +106,9 @@ class SiteController extends Controller
         } else return redirect()->back()->with('exist', 'Credentials information is already in used. Please provide another information');
     }
 
+
+    public function resources()
+    {
+        return view('resources.index');
+    }
 }

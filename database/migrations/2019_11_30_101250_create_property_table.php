@@ -38,6 +38,7 @@ class CreatePropertyTable extends Migration
             $table->string('street_barangay');
             $table->string('city_municipality');
             $table->string('province');
+            $table->string('geographical');
             $table->text('map')->nullable();
             $table->integer('is_featured')->default(0);
             $table->integer('is_approved')->default(0);

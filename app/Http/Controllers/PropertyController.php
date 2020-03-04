@@ -48,7 +48,7 @@ class PropertyController extends Controller
 
 	
 	public function createForm()
-	{
+	{	
 		$province = $this->propertymodule->province();
 		return view('property.create')->with(compact('province'));
 	}

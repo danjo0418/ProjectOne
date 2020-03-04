@@ -7,5 +7,5 @@ use Illuminate\Database\Eloquent\Model;
 class Province extends Model
 {
     protected $table = 'province';
-    protected $fillable = ['province'];
+    protected $fillable = ['province','geographical'];
 }

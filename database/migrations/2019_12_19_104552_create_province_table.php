@@ -16,6 +16,7 @@ class CreateProvinceTable extends Migration
         Schema::create('province', function (Blueprint $table) {
             $table->increments('id');
             $table->string('province');
+            $table->enum('geographical',['Luzon','Visayas','Mindanao']);
             $table->timestamps();
         });
     }
