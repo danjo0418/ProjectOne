@@ -29,7 +29,7 @@ Class Helpers {
 
 	public static function queue()
 	{
-		return Property::select('name', 'city_municipality', 'province')->groupBy('name', 'city_municipality', 'province')->get();
+		return Property::select('city_municipality')->groupBy('city_municipality')->get();
 	}
 
 	public static function findTeamLead($id = null) 

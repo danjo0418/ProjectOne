@@ -38,7 +38,7 @@
 						  	<input class="form-control my-0 py-1 js-search-queue" list="home-queue" type="text" placeholder="Search by city or building" aria-label="Search" style="text-indent:25px; border-radius:5px;">
 						  	<datalist id="home-queue">
 						    	@foreach(App\Modules\Helpers::queue() as $queue)
-						    		<option value="{{ $queue->province.', '.$queue->city_municipality }}">{{ $queue->name }}</option>
+						    		<option value="{{ $queue->city_municipality }}">{{ $queue->name }}</option>
 						    	@endforeach
 						  	</datalist>
 						</div>

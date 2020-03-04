@@ -250,12 +250,14 @@
 														</div>
 													</div>
 												</div>
-												<div class="col-md-12 mt-3">
-													<div class="form-check">
-													    <input type="checkbox" class="form-check-input" id="is_featured" name="is_featured" @if($detail->is_featured == 1) checked @endif>
-													    <label class="form-check-label" for="is_featured">Mark this property as Featured</label>
+												@if(Auth::user()->role_id == 2)
+													<div class="col-md-12 mt-3">
+														<div class="form-check">
+														    <input type="checkbox" class="form-check-input" id="is_featured" name="is_featured" @if($detail->is_featured == 1) checked @endif>
+														    <label class="form-check-label" for="is_featured">Mark this property as Featured</label>
+														</div>
 													</div>
-												</div>
+												@endif
 												<div class="col-md-12 mt-3">
 													<button class="btn btn-keyland">Save Changes</button>
 												</div>

@@ -7,7 +7,7 @@
 						<input type="text" list="queue" value="{{ request()->get('q') }}" class="form-control" placeholder="Search by city or building" name="q">
 						<datalist id="queue">
 					    	@foreach(App\Modules\Helpers::queue() as $queue)
-					    		<option value="{{ $queue->province.', '.$queue->city_municipality }}">{{ $queue->name }}</option>
+					    		<option value="{{ $queue->city_municipality }}"></option>
 					    	@endforeach
 					  	</datalist>
 					</div>

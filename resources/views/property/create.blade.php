@@ -249,17 +249,18 @@
 											</div>
 										</div>
 									</div>
-
-									<div class="section-6 mt-4">
-										<div class="row">
-											<div class="col-md-12">
-												<div class="form-check">
-												    <input type="checkbox" class="form-check-input" id="is_featured" name="is_featured">
-												    <label class="form-check-label" for="is_featured">Mark this property as Featured</label>
+									@if(Auth::user()->role_id == 1)
+										<div class="section-6 mt-4">
+											<div class="row">
+												<div class="col-md-12">
+													<div class="form-check">
+													    <input type="checkbox" class="form-check-input" id="is_featured" name="is_featured">
+													    <label class="form-check-label" for="is_featured">Mark this property as Featured</label>
+													</div>
 												</div>
 											</div>
 										</div>
-									</div>
+									@endif
 									<div class="section-7 mt-4">
 										<button class="btn btn-keyland">Create Property</button>
 									</div>
