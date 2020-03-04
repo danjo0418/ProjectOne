@@ -246,7 +246,7 @@ class PropertyModule
 
 	public function province()
 	{
-		return Province::orderBy('province','ASC')->get();
+		return Province::select('province')->orderBy('province','ASC')->get();
 	}
 
 	public function findProvince($province_id)
@@ -256,7 +256,7 @@ class PropertyModule
 
 	public function cityMunicipality($province_id)
 	{
-		return CityMunicipality::where('province_id', $province_id)->orderBy('city_municipality', 'ASC')->get();
+		return CityMunicipality::select('province_id','city_municipality')->where('province_id', $province_id)->orderBy('city_municipality', 'ASC')->get();
 	}
 
 	public function cities()
