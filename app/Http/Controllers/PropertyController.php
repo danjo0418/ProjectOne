@@ -103,6 +103,7 @@ class PropertyController extends Controller
 	                 'street_barangay'=>$request->street_barangay,
 	                 'city_municipality'=>$request->city_municipality,
 	                 'province'=>$request->province,
+	                 'geographical'=>$request->geographical,
 	                 'map'=>$request->google_iframe,
 	                 'is_featured'=>$is_featured,
 	                 'is_approved'=>$approve,
@@ -120,11 +121,11 @@ class PropertyController extends Controller
 
 					$thumbnail = $resize->resize(null,220, function($constraint) {
 									$constraint->aspectRatio();
-								 })->save(base_path().'/assets/img/properties/thumb/'.$filename,60); 
+								 })->save(base_path().'/public/assets/img/properties/thumb/'.$filename,60); 
 
 					$carousel = $resize->resize(null,360, function($constraint) {
 									$constraint->aspectRatio();
-								})->save(base_path().'/assets/img/properties/'.$filename,60);
+								})->save(base_path().'/public/assets/img/properties/'.$filename,60);
 
 					$photos = ['property_id' => $propertyid,'filename'=>$filename];
                 	$this->propertymodule->createPhoto($photos); 
@@ -193,6 +194,7 @@ class PropertyController extends Controller
                  'street_barangay'=>$request->street_barangay,
                  'city_municipality'=>$request->city_municipality,
                  'province'=>$request->province,
+                 'geographical'=>$request->geographical,
                  'map'=>$request->map,
                  'is_featured'=>$is_featured];
 
@@ -221,11 +223,11 @@ class PropertyController extends Controller
 
 					$thumbnail = $resize->resize(null,220, function($constraint) {
 									$constraint->aspectRatio();
-								 })->save(base_path().'/assets/img/properties/thumb/'.$filename,60); 
+								 })->save(base_path().'/public/assets/img/properties/thumb/'.$filename,60); 
 
 					$carousel = $resize->resize(null,360, function($constraint) {
 									$constraint->aspectRatio();
-								})->save(base_path().'/assets/img/properties/'.$filename,60);
+								})->save(base_path().'/public/assets/img/properties/'.$filename,60);
 
 					$dataPhoto = ['property_id' => $request->property_id,'filename'=>$filename];
                 	$this->propertymodule->createPhoto($dataPhoto); 
@@ -334,12 +336,6 @@ class PropertyController extends Controller
 		} 
 	}
 
-	public function cities(Request $request)
-	{
-		$province = $this->propertymodule->findProvince($request->province);
-		return $this->propertymodule->cityMunicipality($province->id);
-	}
-
 
 	public function approveProperty()
 	{
@@ -417,6 +413,16 @@ class PropertyController extends Controller
 	{	
 		$properties = $this->propertymodule->restoreProperty();
 		return view('restore.property')->with(compact('properties'));
+	}
+
+	public function cities(Request $request)
+	{
+		$province = $this->propertymodule->findProvince($request->province);
+		return $this->propertymodule->cityMunicipality($province->id);
+	}
+
+	public function geographical(Request $request) {
+		return $province = $this->propertymodule->fingGeographical($request->province);
 	}
 }
 

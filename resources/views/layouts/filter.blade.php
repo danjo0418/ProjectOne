@@ -4,7 +4,7 @@
 			<div class="col-md-12 p-0">
 				<form class="form-inline justify-content-md-end">
 					<div class="form-group s-input m-0 mr-1">
-						<input type="text" list="queue" value="{{ request()->get('q') }}" class="form-control" placeholder="Search by city or building" name="q">
+						<input type="text" list="queue" value="{{ request()->get('q') }}" class="form-control" placeholder="Search by city or building" name="city">
 						<datalist id="queue">
 					    	@foreach(App\Modules\Helpers::queue() as $queue)
 					    		<option value="{{ $queue->city_municipality }}"></option>

@@ -121,27 +121,26 @@
 			<h1 class="text-center pb-3">Our Locations</h1>
 			<div class="row">
 				<div class="col-md-4 col-sm-12">
-					<a href="{{ URL::to('properties?province=Cebu') }}">
-						<img src="{{ asset('assets/img/img-cebu.jpg') }}" alt ="image cebu" class="img-fluid"/>
+					<a href="{{ URL::to('properties?island=Luzon') }}">
+						<img src="{{ asset('assets/img/img-manila.jpg') }}" alt ="image cebu" class="img-fluid"/>
 						<div class="middle">
-						   <p class="text-center">CEBU</p>
+						   <p class="text-center">LUZON</p>
 						</div>
 					</a>
 				</div>
 				<div class="col-md-4 col-sm-12">
-					<a href="{{ URL::to('properties?province=Bohol') }}">
-						<img src="{{ asset('assets/img/img-bohol.jpg') }}" alt ="image bohol" class="img-fluid"/>
+					<a href="{{ URL::to('properties?island=Visayas') }}">
+						<img src="{{ asset('assets/img/img-cebu.jpg') }}" alt ="image bohol" class="img-fluid"/>
 						<div class="middle">
-						   <p class="text-center">BOHOL</p>
+						   <p class="text-center">VISAYAS</p>
 						</div>
 					</a>
 				</div>
 				<div class="col-md-4 col-sm-12">
-					<a href="javascript:void(0)">
-						<img src="{{ asset('assets/img/img-manila.jpg') }}" alt ="image manila" class="img-fluid"/>
+					<a href="{{ URL::to('properties?island=Mindanao') }}">
+						<img src="{{ asset('assets/img/img-bohol.jpg') }}" alt ="image manila" class="img-fluid"/>
 						<div class="middle">
-						   <p class="text-center mb-0">Manila</p>
-						   <small class="text-dark">Coming Soon</small>
+						   <p class="text-center mb-0">MINDANAO</p>
 						</div>
 					</a>
 				</div>

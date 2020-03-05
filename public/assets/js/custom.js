@@ -53,8 +53,8 @@ jQuery(document).ready(function($) {
 
 		if(queue != '') {
 
-			if(type != null) window.location.href = directory+'?type='+type+'&q='+queue;
-			else window.location.href = directory+'?q='+queue;
+			if(type != null) window.location.href = directory+'?type='+type+'&city='+queue;
+			else window.location.href = directory+'?city='+queue;
 
 		} else if(type != null) {
 

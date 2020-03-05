@@ -17,6 +17,7 @@ Route::get('news-and-updates', 'SiteController@resources');
 Route::get('contact-us', 'SiteController@contactUs');
 
 Route::get('find-city', 'PropertyController@cities');
+Route::get('geographical', 'PropertyController@geographical');
 
 Route::get('news-and-updates', 'SiteController@resources');
 

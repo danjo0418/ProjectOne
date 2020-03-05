@@ -43,7 +43,7 @@ class PropertyModule
 
 		$city = request()->get('city');
 
-		$queue = request()->get('q');
+		$island = request()->get('island');
 
 		$query = Property::with('type','status','thumbnail','agents.details');
 
@@ -62,7 +62,7 @@ class PropertyModule
 		if(request()->has('city')) $query->where('city_municipality', $city);
 		else $query;
 
-		if(request()->has('q')) $query->where(DB::raw("CONCAT(province,', ',city_municipality)"),'like','%'.$queue.'%');
+		if(request()->has('island')) $query->where('geographical', $island);
 		else $query;
 
 		return $query->whereIn('status_id', $status)->where('is_approved',1)->orderBy('id','DESC')->paginate(5);
@@ -289,5 +289,10 @@ class PropertyModule
 		else $query;
 								// 2 = decline, 3 = remove
 		return $query->whereIn('is_approved', [2,3])->orderBy('id','DESC')->paginate(10); 
+	}
+
+	public function fingGeographical($provincename)
+	{
+		return Province::where('province', $provincename)->first();
 	}
 }

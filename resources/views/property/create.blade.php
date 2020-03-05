@@ -183,6 +183,12 @@
 										<h5 class="m-0">Location of Property</h5>
 										<p>Give us as much information about the location of your property as you can so that users can find property easily.</p>
 										<div class="row">
+											<div class="col-md-12">
+												<div class="form-group">
+													<label for="">Geographic</label>
+													<input type="text" class="form-control js-geographical" name="geographical" readonly>
+												</div>
+											</div>
 											<div class="col-md-6">
 												<div class="form-group">
 													<label for="province">Province <span class="text-danger">*</span></label>
@@ -202,7 +208,7 @@
 													</select>
 												</div>
 											</div>
-											<div class="col-md-6">
+											<div class="col-md-12">
 												<div class="form-group">
 													<label for="street">House No. Street/Barangay <span class="text-danger">*</span></label>
 													<input type="text" class="form-control js-street" name="street_barangay" required/>
@@ -371,6 +377,11 @@
 
 	     			$('.js-municipality').html(option);
 	     		});
+
+	     		$.get(BASE_URL+'/geographical',{ province:province }, function(response) {
+	     			$('.js-geographical').val(response.geographical);
+	     		});
+
 		   });
 
 		});
