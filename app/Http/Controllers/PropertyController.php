@@ -336,6 +336,12 @@ class PropertyController extends Controller
 		} 
 	}
 
+	public function cities(Request $request)
+	{
+		$province = $this->propertymodule->findProvince($request->province);
+		return $this->propertymodule->cityMunicipality($province->id);
+	}
+
 
 	public function approveProperty()
 	{
@@ -413,12 +419,6 @@ class PropertyController extends Controller
 	{	
 		$properties = $this->propertymodule->restoreProperty();
 		return view('restore.property')->with(compact('properties'));
-	}
-
-	public function cities(Request $request)
-	{
-		$province = $this->propertymodule->findProvince($request->province);
-		return $this->propertymodule->cityMunicipality($province->id);
 	}
 
 	public function geographical(Request $request) {

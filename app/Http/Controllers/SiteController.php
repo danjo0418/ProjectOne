@@ -105,10 +105,4 @@ class SiteController extends Controller
 
         } else return redirect()->back()->with('exist', 'Credentials information is already in used. Please provide another information');
     }
-
-
-    public function resources()
-    {
-        return view('resources.index');
-    }
 }

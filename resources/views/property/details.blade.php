@@ -51,11 +51,12 @@
 						
 						<h5 class="pt-3">Location:</h5>
 						<p>{{ $detail->street_barangay.', '.$detail->city_municipality.', '.ucwords($detail->province) }}</p>
-
-						<h5 class="pt-3">Google Map:</h5>
-						<div class="googlemap">
-							{!! $detail->map !!}
-						</div>
+						@if(!empty($detail->map))
+							<h5 class="pt-3">Google Map:</h5>
+							<div class="googlemap">
+								{!! $detail->map !!}
+							</div>
+						@endif
 					</div>
 				</div>
 				<div class="col-md-6 col-sm-12">

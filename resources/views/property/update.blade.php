@@ -177,7 +177,7 @@
 											<p>Give us as much information about the location of your property as you can so that users can find property easily.</p>
 											<div class="row mb-4">
 												<div class="col-md-12">
-												<div class="form-group">
+													<div class="form-group">
 														<label for="">Geographic</label>
 														<input type="text" class="form-control js-geographical" value="{{ $detail->geographical }}" name="geographical" readonly>
 													</div>

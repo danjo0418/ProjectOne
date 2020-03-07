@@ -19,8 +19,6 @@ Route::get('contact-us', 'SiteController@contactUs');
 Route::get('find-city', 'PropertyController@cities');
 Route::get('geographical', 'PropertyController@geographical');
 
-Route::get('news-and-updates', 'SiteController@resources');
-
 Route::post('postApplicant', 'MailerController@createApplication');	
 Route::post('postContactUs', 'MailerController@createContactMessage');
 Route::post('postInquiry', 'MailerController@createInquiry');

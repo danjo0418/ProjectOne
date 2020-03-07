@@ -4,7 +4,7 @@
 			<div class="col-md-12 p-0">
 				<form class="form-inline justify-content-md-end">
 					<div class="form-group s-input m-0 mr-1">
-						<input type="text" list="queue" value="{{ request()->get('q') }}" class="form-control" placeholder="Search by city or building" name="city">
+						<input type="text" list="queue" value="{{ request()->get('city') }}" class="form-control" placeholder="Search by city or building" name="city">
 						<datalist id="queue">
 					    	@foreach(App\Modules\Helpers::queue() as $queue)
 					    		<option value="{{ $queue->city_municipality }}"></option>
@@ -12,7 +12,7 @@
 					  	</datalist>
 					</div>
 					<div class="form-group s-button m-0">
-						@if(request()->has('q'))
+						@if(request()->has('city'))
 					  		<a href="{{ URL::to('properties') }}" class="btn btn-danger"><i class="fa fa-search-minus"></i></a>
 						@else
 					  		<button type="submit" class="btn btn-warning"><i class="fa fa-search"></i></button>

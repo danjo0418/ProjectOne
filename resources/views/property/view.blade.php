@@ -168,27 +168,30 @@
 								<ul class="list-unstyled">
 									<li>Status: {{ $detail->status->status }}</li>
 									<li>Date Posted: {{ date('M d, Y', strtotime($detail->updated_at)) }}</li>
-									@if($detail->furnished == 'Fully Furnished')
-										<li class="text-success">
-											<i class="fa fa-check"></i>
-									@elseif($detail->furnished == 'Semi Furnished')
-										<li class="text-primary">
-											<i class="fa fa-check"></i>
-									@elseif($detail->furnished == 'Unfurnished')
-										<li class="text-warning">
-											<i class="fa fa-check"></i>
-									@else
-										<li class="text-dark">
-											<i class="fa fa-check"></i>
+									@if(!empty($detail->furnished))
+										@if($detail->furnished == 'Fully Furnished')
+											<li class="text-success">
+												<i class="fa fa-check"></i>
+										@elseif($detail->furnished == 'Semi Furnished')
+											<li class="text-primary">
+												<i class="fa fa-check"></i>
+										@elseif($detail->furnished == 'Unfurnished')
+											<li class="text-warning">
+												<i class="fa fa-check"></i>
+										@else
+											<li class="text-dark">
+												<i class="fa fa-check"></i>
+										@endif
+												{{ $detail->furnished }}
+											</li>
 									@endif
-											{{ $detail->furnished }}
-										</li>
 								</ul>
+								@if(!empty($detail->map))
+									<h5 class="pt-3">Google Map:</h5>
+									<div class="googlemap">
+										{!! $detail->map !!}
+									</div>
 
-								<h5 class="pt-3">Google Map:</h5>
-								<div class="googlemap">
-									{!! $detail->map !!}
-								</div>
 				        	</div>
 				        	<div class="col-md-5">
 				        		<div class="bg-dark py-2 px-1 mb-3">

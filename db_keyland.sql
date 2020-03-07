@@ -1671,9 +1671,9 @@ CREATE TABLE IF NOT EXISTS `history` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=108 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=112 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table db_keyland.history: ~107 rows (approximately)
+-- Dumping data for table db_keyland.history: ~111 rows (approximately)
 /*!40000 ALTER TABLE `history` DISABLE KEYS */;
 INSERT INTO `history` (`id`, `user_id`, `description`, `created_at`, `updated_at`) VALUES
 	(1, 1, 'Keyland Realty added new agent named <strong>Joseph Deliman</strong> with email <i><a href=\'mailto:deliman200@gmail.com\'>deliman200@gmail.com</a></i>.', '2019-12-24 07:19:16', '2019-12-24 07:19:16'),
@@ -1782,7 +1782,11 @@ INSERT INTO `history` (`id`, `user_id`, `description`, `created_at`, `updated_at
 	(104, 1, '<strong>Apartment for rent</strong> property has been removed', '2020-01-20 07:59:44', '2020-01-20 07:59:44'),
 	(105, 1, '<strong>Apartment for rent</strong> property has been archive', '2020-01-20 07:59:51', '2020-01-20 07:59:51'),
 	(106, 1, '<strong>Apartment for rent</strong> property has been removed', '2020-01-20 08:12:22', '2020-01-20 08:12:22'),
-	(107, 1, '<strong>Apartment for rent</strong> property has been archive', '2020-01-20 08:12:38', '2020-01-20 08:12:38');
+	(107, 1, '<strong>Apartment for rent</strong> property has been archive', '2020-01-20 08:12:38', '2020-01-20 08:12:38'),
+	(108, 1, 'Keyland Realty posted new property in title <strong>1-Storey 2-Bedroom Single Attached House</strong>.', '2020-03-05 00:55:03', '2020-03-05 00:55:03'),
+	(109, 1, '<strong>Apartment for rent</strong> details has been updated.', '2020-03-05 01:03:16', '2020-03-05 01:03:16'),
+	(110, 1, '<strong>Condo Unit For Sale</strong> details has been updated.', '2020-03-05 01:05:01', '2020-03-05 01:05:01'),
+	(111, 1, '<strong>Condo Unit For Sale</strong> details has been updated.', '2020-03-05 01:05:22', '2020-03-05 01:05:22');
 /*!40000 ALTER TABLE `history` ENABLE KEYS */;
 
 -- Dumping structure for table db_keyland.mails
@@ -1906,17 +1910,18 @@ CREATE TABLE IF NOT EXISTS `property` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table db_keyland.property: ~6 rows (approximately)
+-- Dumping data for table db_keyland.property: ~7 rows (approximately)
 /*!40000 ALTER TABLE `property` DISABLE KEYS */;
 INSERT INTO `property` (`id`, `code`, `offer_type`, `type_id`, `status_id`, `name`, `about`, `bedrooms`, `bathrooms`, `floor_area`, `land_size`, `building_name`, `block_lotnum`, `developer`, `furnished`, `rooms`, `car_space`, `build_year`, `deposit_bond`, `price`, `price_condition`, `street_barangay`, `city_municipality`, `province`, `geographical`, `map`, `is_featured`, `is_approved`, `created_by`, `created_at`, `updated_at`) VALUES
-	(1, '0001VY5Az', 'buy', 1, 1, 'House and Lot for Sale', '<div>Easy access on supermarket, malls, church, highway</div>', 3, 1, 130, NULL, NULL, NULL, 'Homebuilders', 'Fully Furnished', NULL, NULL, NULL, NULL, 1200000, NULL, 'gaudalupe', 'Cebu City', 'Cebu', NULL, '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15701.024362108195!2d123.87315369999999!3d10.3213787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a99ecedffd4d93%3A0x6c00a0cf0efb2913!2sGuadalupe%2C%20Cebu%20City%2C%20Cebu!5e0!3m2!1sen!2sph!4v1577172009446!5m2!1sen!2sph" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>', 1, 1, 3, '2019-12-24 07:20:25', '2019-12-24 07:20:25'),
-	(2, '0002ErJqJ', 'rent', 3, 2, 'Lady bed spacer for rent', '<div>Located near in Mepz 1 pusok lapu-lapu city, easy access in mactan island mall.</div>', 2, 1, 60, NULL, NULL, NULL, 'Ajoya', 'Semi Furnished', NULL, NULL, NULL, NULL, 3000, 'monthly', 'pusok', 'Lapu-lapu City', 'Cebu', NULL, '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7850.497948677073!2d123.97218344999999!3d10.321949049999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a999d680997be1%3A0x888ed11028d84b4d!2sPusok%2C%20Lapu-Lapu%20City%2C%20Cebu!5e0!3m2!1sen!2sph!4v1577235485601!5m2!1sen!2sph" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>', 1, 1, 2, '2019-12-25 00:58:29', '2019-12-29 10:32:32'),
-	(3, '000322s7A', 'buy', 1, 1, 'Test dummy for sale', '<div>test</div>', 1, 1, NULL, NULL, '2', NULL, NULL, 'Fully Furnished', NULL, NULL, NULL, NULL, 12300000, NULL, 'Bangkal', 'Batuan', 'Bohol', NULL, '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52897.58158231411!2d124.09766165372075!3d9.796811361295909!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33aa3dd61ac93845%3A0xd0d3ef95e16478f8!2sBatuan%20Hammock%20Hostel!5e0!3m2!1sen!2sph!4v1578629528092!5m2!1sen!2sph" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>', 1, 1, 1, '2020-01-10 04:12:50', '2020-01-10 04:41:34'),
-	(4, '0004BXekD', 'buy', 2, 1, 'Condo Unit For Sale', '<div>Easy access in Ayala Malls, Business company, Historical churches, Universities. Has a high standard equipement for building.&nbsp;</div>', 3, 1, 130, NULL, 'One World', 'Unit 34, 5th Floor', NULL, 'Fully Furnished', NULL, NULL, NULL, NULL, 2300000, NULL, 'Cardinal Rosales Ave', 'Cebu City', 'Cebu', NULL, '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3925.3470368219782!2d123.90626011562195!3d10.314086767190558!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a999408a7237ad%3A0x3252001444c95068!2s2Quad%20Building!5e0!3m2!1sen!2sph!4v1578732519312!5m2!1sen!2sph" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>', 1, 1, 4, '2020-01-11 08:48:57', '2020-01-20 07:44:29'),
-	(5, '0005tLIXq', 'rent', 3, 2, 'Apartment for rent', '<div>Lady bed spacer near MEPZ 1 pusok, lapu-lapu city.</div>', 2, 1, 50, NULL, NULL, NULL, NULL, 'Semi Furnished', NULL, NULL, NULL, NULL, 4000, 'monthly', 'Pusok', 'Lapu-lapu City', 'Cebu', NULL, '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1962.6171207795132!2d123.97183850707479!3d10.323129757312627!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a999d5848a64ed%3A0xd61caa9326d90203!2sKennah%20Eatery!5e0!3m2!1sen!2sph!4v1578732887332!5m2!1sen!2sph" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>', 0, 1, 4, '2020-01-11 08:55:02', '2020-01-20 08:12:38'),
-	(6, '0006V2ros', 'buy', 5, 1, 'Commercial Lot for Rent', '<span>The property’s Talomo neighbourhood enjoys close proximity to the Land Transportation Office Bus Station, less than 4km away. Plus, it’s home to the Davao Crocodile Park, a conservation centre and zoo where you can also enjoy panoramic views from the zipline. For those with a fascination for nature, there are 650 animal skeletons, including the world’s tallest bird, at the D\' Bone Collector Museum, a 15-minute taxi ride away. For conveniently located offices in an action-packed location, this premium property is the perfect choice.</span>', 3, 1, 129, NULL, 'Tumolak Building', 'Blck. 3 Lot 4', NULL, 'Fully Furnished', NULL, NULL, NULL, NULL, 1800000, NULL, 'Gun-ob', 'Lapu-lapu City', 'Cebu', NULL, '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15702.069140317557!2d123.9531816!3d10.3004228!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a999ed793cfa7f%3A0xe15026a7c2a928d6!2sGun-ob%2C%20Lapu-Lapu%20City%2C%20Cebu!5e0!3m2!1sen!2sph!4v1578733115486!5m2!1sen!2sph" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>', 1, 2, 4, '2020-01-11 08:58:55', '2020-01-20 07:50:32');
+	(1, '0001VY5Az', 'buy', 1, 1, 'House and Lot for Sale', '<div>Easy access on supermarket, malls, church, highway</div>', 3, 1, 130, NULL, NULL, NULL, 'Homebuilders', 'Fully Furnished', NULL, NULL, NULL, NULL, 1200000, NULL, 'gaudalupe', 'Cebu City', 'Cebu', 'Visayas', '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15701.024362108195!2d123.87315369999999!3d10.3213787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a99ecedffd4d93%3A0x6c00a0cf0efb2913!2sGuadalupe%2C%20Cebu%20City%2C%20Cebu!5e0!3m2!1sen!2sph!4v1577172009446!5m2!1sen!2sph" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>', 1, 1, 3, '2019-12-24 07:20:25', '2019-12-24 07:20:25'),
+	(2, '0002ErJqJ', 'rent', 3, 2, 'Lady bed spacer for rent', '<div>Located near in Mepz 1 pusok lapu-lapu city, easy access in mactan island mall.</div>', 2, 1, 60, NULL, NULL, NULL, 'Ajoya', 'Semi Furnished', NULL, NULL, NULL, NULL, 3000, 'monthly', 'pusok', 'Lapu-lapu City', 'Cebu', 'Visayas', '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7850.497948677073!2d123.97218344999999!3d10.321949049999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a999d680997be1%3A0x888ed11028d84b4d!2sPusok%2C%20Lapu-Lapu%20City%2C%20Cebu!5e0!3m2!1sen!2sph!4v1577235485601!5m2!1sen!2sph" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>', 1, 1, 2, '2019-12-25 00:58:29', '2019-12-29 10:32:32'),
+	(3, '000322s7A', 'buy', 1, 1, 'Test dummy for sale', '<div>test</div>', 1, 1, NULL, NULL, '2', NULL, NULL, 'Fully Furnished', NULL, NULL, NULL, NULL, 12300000, NULL, 'Bangkal', 'Batuan', 'Bohol', 'Visayas', '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52897.58158231411!2d124.09766165372075!3d9.796811361295909!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33aa3dd61ac93845%3A0xd0d3ef95e16478f8!2sBatuan%20Hammock%20Hostel!5e0!3m2!1sen!2sph!4v1578629528092!5m2!1sen!2sph" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>', 1, 1, 1, '2020-01-10 04:12:50', '2020-01-10 04:41:34'),
+	(4, '0004BXekD', 'buy', 2, 1, 'Condo Unit For Sale', '<div>Easy access in Ayala Malls, Business company, Historical churches, Universities. Has a high standard equipement for building.&nbsp;</div>', 3, 1, 130, NULL, 'One World', 'Unit 34, 5th Floor', NULL, 'Fully Furnished', NULL, NULL, NULL, NULL, 2300000, NULL, 'Cardinal Rosales Ave', 'Baler', 'Aurora', 'Luzon', '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3925.3470368219782!2d123.90626011562195!3d10.314086767190558!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a999408a7237ad%3A0x3252001444c95068!2s2Quad%20Building!5e0!3m2!1sen!2sph!4v1578732519312!5m2!1sen!2sph" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>', 0, 1, 4, '2020-01-11 08:48:57', '2020-03-05 01:05:22'),
+	(5, '0005tLIXq', 'rent', 3, 2, 'Apartment for rent', '<div>Lady bed spacer near MEPZ 1 pusok, lapu-lapu city.</div>', 2, 1, 50, NULL, NULL, NULL, NULL, 'Semi Furnished', NULL, NULL, NULL, NULL, 4000, 'monthly', 'Pusok', 'Lapu-lapu City', 'Cebu', 'Visayas', '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1962.6171207795132!2d123.97183850707479!3d10.323129757312627!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a999d5848a64ed%3A0xd61caa9326d90203!2sKennah%20Eatery!5e0!3m2!1sen!2sph!4v1578732887332!5m2!1sen!2sph" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>', 0, 1, 4, '2020-01-11 08:55:02', '2020-03-05 01:03:16'),
+	(6, '0006V2ros', 'buy', 5, 1, 'Commercial Lot for Rent', '<span>The property’s Talomo neighbourhood enjoys close proximity to the Land Transportation Office Bus Station, less than 4km away. Plus, it’s home to the Davao Crocodile Park, a conservation centre and zoo where you can also enjoy panoramic views from the zipline. For those with a fascination for nature, there are 650 animal skeletons, including the world’s tallest bird, at the D\' Bone Collector Museum, a 15-minute taxi ride away. For conveniently located offices in an action-packed location, this premium property is the perfect choice.</span>', 3, 1, 129, NULL, 'Tumolak Building', 'Blck. 3 Lot 4', NULL, 'Fully Furnished', NULL, NULL, NULL, NULL, 1800000, NULL, 'Gun-ob', 'Lapu-lapu City', 'Cebu', 'Visayas', '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15702.069140317557!2d123.9531816!3d10.3004228!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a999ed793cfa7f%3A0xe15026a7c2a928d6!2sGun-ob%2C%20Lapu-Lapu%20City%2C%20Cebu!5e0!3m2!1sen!2sph!4v1578733115486!5m2!1sen!2sph" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>', 1, 2, 4, '2020-01-11 08:58:55', '2020-01-20 07:50:32'),
+	(7, '0007mY0xi', 'buy', 2, 1, '1-Storey 2-Bedroom Single Attached House', '<div>lorem</div>', 32, NULL, NULL, NULL, NULL, NULL, 'Ajoya', 'Fully Finished', NULL, NULL, NULL, NULL, 321, NULL, 'Bangkal', 'Maramag', 'Bukidnon', 'Mindanao', '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126495.60796304878!2d124.90557856201184!3d7.791121050110482!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32ff3b704e4bbbd7%3A0x85119da0f1a26a5c!2sMaramag%2C%20Bukidnon!5e0!3m2!1sen!2sph!4v1583369523997!5m2!1sen!2sph" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>', 0, 1, 1, '2020-03-05 00:55:03', '2020-03-05 00:55:03');
 /*!40000 ALTER TABLE `property` ENABLE KEYS */;
 
 -- Dumping structure for table db_keyland.property_agent
@@ -1951,9 +1956,9 @@ CREATE TABLE IF NOT EXISTS `property_photo` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table db_keyland.property_photo: ~11 rows (approximately)
+-- Dumping data for table db_keyland.property_photo: ~12 rows (approximately)
 /*!40000 ALTER TABLE `property_photo` DISABLE KEYS */;
 INSERT INTO `property_photo` (`id`, `property_id`, `filename`, `created_at`, `updated_at`) VALUES
 	(1, 1, '15771720259ed9a451f267a1a9460939f799397537_featured_v2.jpg', '2019-12-24 07:20:25', '2019-12-24 07:20:25'),
@@ -1966,7 +1971,8 @@ INSERT INTO `property_photo` (`id`, `property_id`, `filename`, `created_at`, `up
 	(12, 4, '1578732652download.jpg', '2020-01-11 08:50:52', '2020-01-11 08:50:52'),
 	(13, 5, '15787329011f1557edb8b7bc.jpg', '2020-01-11 08:55:01', '2020-01-11 08:55:01'),
 	(14, 5, '1578732901d55ae3c081db67.jpg', '2020-01-11 08:55:01', '2020-01-11 08:55:01'),
-	(15, 6, '15787331353cce05f8df8025.jpg', '2020-01-11 08:58:55', '2020-01-11 08:58:55');
+	(15, 6, '15787331353cce05f8df8025.jpg', '2020-01-11 08:58:55', '2020-01-11 08:58:55'),
+	(16, 7, '1583369702gamingcase.jpg', '2020-03-05 00:55:03', '2020-03-05 00:55:03');
 /*!40000 ALTER TABLE `property_photo` ENABLE KEYS */;
 
 -- Dumping structure for table db_keyland.property_status
@@ -2022,87 +2028,87 @@ CREATE TABLE IF NOT EXISTS `province` (
 /*!40000 ALTER TABLE `province` DISABLE KEYS */;
 INSERT INTO `province` (`id`, `province`, `geographical`, `created_at`, `updated_at`) VALUES
 	(1, 'Metro Manila', 'Luzon', '2020-03-04 10:53:02', '2020-03-04 10:53:04'),
-	(2, 'Abra', 'Luzon', '2020-03-04 10:53:04', '2020-03-04 10:53:05'),
-	(3, 'Apayao', 'Luzon', '2020-03-04 10:53:07', '2020-03-04 10:53:26'),
-	(4, 'Benguet', 'Luzon', '2020-03-04 10:53:08', '2020-03-04 10:53:26'),
-	(5, 'Ifugao', 'Luzon', '2020-03-04 10:53:08', '2020-03-04 10:53:27'),
-	(6, 'Kalinga', 'Luzon', '2020-03-04 10:53:09', '2020-03-04 10:53:28'),
-	(7, 'Mountain Province', 'Luzon', '2020-03-04 10:53:10', '2020-03-04 10:53:29'),
-	(8, 'Ilocos Norte', 'Luzon', '2020-03-04 10:53:10', '2020-03-04 10:53:29'),
-	(9, 'Ilocos Sur', 'Luzon', '2020-03-04 10:53:12', '2020-03-04 10:53:30'),
-	(10, 'La Union', 'Luzon', '2020-03-04 10:53:11', '2020-03-04 10:53:31'),
-	(11, 'Pangasinan', 'Luzon', '2020-03-04 10:53:12', '2020-03-04 10:53:31'),
-	(12, 'Batanes', 'Luzon', '2020-03-04 10:53:13', '2020-03-04 10:53:32'),
-	(13, 'Cagayan', 'Luzon', '2020-03-04 10:53:14', '2020-03-04 10:53:33'),
-	(14, 'Isabela', 'Luzon', '2020-03-04 10:53:14', '2020-03-04 10:53:34'),
-	(15, 'Nueva Vizcaya', 'Luzon', '2020-03-04 10:53:15', '2020-03-04 10:53:35'),
-	(16, 'Quirino', 'Luzon', '2020-03-04 10:53:17', '2020-03-04 10:53:35'),
+	(2, 'Abra', 'Luzon', '2020-03-04 10:53:16', '2020-03-04 10:53:36'),
+	(3, 'Apayao', 'Luzon', '2020-03-04 10:53:16', '2020-03-04 10:53:36'),
+	(4, 'Benguet', 'Luzon', '2020-03-04 10:53:16', '2020-03-04 10:53:36'),
+	(5, 'Ifugao', 'Luzon', '2020-03-04 10:53:16', '2020-03-04 10:53:36'),
+	(6, 'Kalinga', 'Luzon', '2020-03-04 10:53:16', '2020-03-04 10:53:36'),
+	(7, 'Mountain Province', 'Luzon', '2020-03-04 10:53:16', '2020-03-04 10:53:36'),
+	(8, 'Ilocos Norte', 'Luzon', '2020-03-04 10:53:16', '2020-03-04 10:53:36'),
+	(9, 'Ilocos Sur', 'Luzon', '2020-03-04 10:53:16', '2020-03-04 10:53:36'),
+	(10, 'La Union', 'Luzon', '2020-03-04 10:53:16', '2020-03-04 10:53:36'),
+	(11, 'Pangasinan', 'Luzon', '2020-03-04 10:53:16', '2020-03-04 10:53:36'),
+	(12, 'Batanes', 'Luzon', '2020-03-04 10:53:16', '2020-03-04 10:53:36'),
+	(13, 'Cagayan', 'Luzon', '2020-03-04 10:53:16', '2020-03-04 10:53:36'),
+	(14, 'Isabela', 'Luzon', '2020-03-04 10:53:16', '2020-03-04 10:53:36'),
+	(15, 'Nueva Vizcaya', 'Luzon', '2020-03-04 10:53:16', '2020-03-04 10:53:36'),
+	(16, 'Quirino', 'Luzon', '2020-03-04 10:53:16', '2020-03-04 10:53:36'),
 	(17, 'Aurora', 'Luzon', '2020-03-04 10:53:16', '2020-03-04 10:53:36'),
-	(18, 'Bataan', 'Luzon', '2020-03-04 10:53:19', '2020-03-04 10:53:37'),
-	(19, 'Bulacan', 'Luzon', '2020-03-04 10:53:19', '2020-03-04 10:53:38'),
-	(20, 'Nueva Ecija', 'Luzon', '2020-03-04 10:53:20', '2020-03-04 10:53:38'),
-	(21, 'Pampanga', 'Luzon', '2020-03-04 10:53:21', '2020-03-04 10:53:39'),
-	(22, 'Tarlac', 'Luzon', '2020-03-04 10:53:21', '2020-03-04 10:53:40'),
-	(23, 'Zambales', 'Luzon', '2020-03-04 10:53:23', '2020-03-04 10:53:41'),
-	(24, 'Batangas', 'Luzon', '2020-03-04 10:53:23', '2020-03-04 10:53:42'),
-	(25, 'Cavite', 'Luzon', '2020-03-04 10:53:24', '2020-03-04 10:53:42'),
-	(26, 'Laguna', 'Luzon', NULL, NULL),
-	(27, 'Quezon', 'Luzon', NULL, NULL),
-	(28, 'Rizal', 'Luzon', NULL, NULL),
-	(29, 'Marinduque', 'Luzon', NULL, NULL),
-	(30, 'Occidental Mindoro', 'Luzon', NULL, NULL),
-	(31, 'Oriental Mindoro', 'Luzon', NULL, NULL),
-	(32, 'Palawan', 'Luzon', NULL, NULL),
-	(33, 'Romblon', 'Luzon', NULL, NULL),
-	(34, 'Albay', 'Luzon', NULL, NULL),
-	(35, 'Camarines Norte', 'Luzon', NULL, NULL),
-	(36, 'Camarines Sur', 'Luzon', NULL, NULL),
-	(37, 'Catanduanes', 'Luzon', NULL, NULL),
-	(38, 'Masbate', 'Luzon', NULL, NULL),
-	(39, 'Sorsogon', 'Luzon', NULL, NULL),
-	(40, 'Aklan', 'Visayas', NULL, NULL),
-	(41, 'Antique', 'Visayas', NULL, NULL),
-	(42, 'Capiz', 'Visayas', NULL, NULL),
-	(43, 'Guimaras', 'Visayas', NULL, NULL),
-	(44, 'Iloilo', 'Visayas', NULL, NULL),
-	(45, 'Negros Occidental', 'Visayas', NULL, NULL),
-	(46, 'Bohol', 'Visayas', NULL, NULL),
-	(47, 'Cebu', 'Visayas', NULL, NULL),
-	(48, 'Negros Oriental', 'Visayas', NULL, NULL),
-	(49, 'Siquijor', 'Visayas', NULL, NULL),
-	(50, 'Biliran', 'Visayas', NULL, NULL),
-	(51, 'Eastern Samar', 'Visayas', NULL, NULL),
-	(52, 'Leyte', 'Visayas', NULL, NULL),
-	(53, 'Northern Samar', 'Visayas', NULL, NULL),
-	(54, 'Samar', 'Visayas', NULL, NULL),
-	(55, 'Southern Leyte', 'Visayas', NULL, NULL),
-	(56, 'Zamboanga del Norte', 'Mindanao', NULL, NULL),
-	(57, 'Zamboanga del Sur', 'Mindanao', NULL, NULL),
-	(58, 'Zamboanga Sibugay', 'Mindanao', NULL, NULL),
-	(59, 'Bukidnon', 'Mindanao', NULL, NULL),
-	(60, 'Camiguin', 'Mindanao', NULL, NULL),
-	(61, 'Lanao del Norte', 'Mindanao', NULL, NULL),
-	(62, 'Misamis Occidental', 'Mindanao', NULL, NULL),
-	(63, 'Misamis Oriental', 'Mindanao', NULL, NULL),
-	(64, 'Compostela Valley', 'Mindanao', NULL, NULL),
-	(65, 'Davao del Norte', 'Mindanao', NULL, NULL),
-	(66, 'Davao del Sur', 'Mindanao', NULL, NULL),
-	(67, 'Davao Occidental', 'Mindanao', NULL, NULL),
-	(68, 'Davao Oriental', 'Mindanao', NULL, NULL),
-	(69, 'Cotabato', 'Mindanao', NULL, NULL),
-	(70, 'Sarangani', 'Mindanao', NULL, NULL),
-	(71, 'South Cotabato', 'Mindanao', NULL, NULL),
-	(72, 'Sultan Kudarat', 'Mindanao', NULL, NULL),
-	(73, 'Agusan del Norte', 'Mindanao', NULL, NULL),
-	(74, 'Agusan del Sur', 'Mindanao', NULL, NULL),
-	(75, 'Dinagat Islands', 'Mindanao', NULL, NULL),
-	(76, 'Surigao del Norte', 'Mindanao', NULL, NULL),
-	(77, 'Surigao del Sur', 'Mindanao', NULL, NULL),
-	(78, 'Basilan', 'Mindanao', NULL, NULL),
-	(79, 'Lanao del Sur', 'Mindanao', NULL, NULL),
-	(80, 'Maguindanao', 'Mindanao', NULL, NULL),
-	(81, 'Sulu', 'Mindanao', NULL, NULL),
-	(82, 'Tawi-tawi', 'Mindanao', NULL, NULL);
+	(18, 'Bataan', 'Luzon', '2020-03-04 10:53:16', '2020-03-04 10:53:36'),
+	(19, 'Bulacan', 'Luzon', '2020-03-04 10:53:16', '2020-03-04 10:53:36'),
+	(20, 'Nueva Ecija', 'Luzon', '2020-03-04 10:53:16', '2020-03-04 10:53:36'),
+	(21, 'Pampanga', 'Luzon', '2020-03-04 10:53:16', '2020-03-04 10:53:36'),
+	(22, 'Tarlac', 'Luzon', '2020-03-04 10:53:16', '2020-03-04 10:53:36'),
+	(23, 'Zambales', 'Luzon', '2020-03-04 10:53:16', '2020-03-04 10:53:36'),
+	(24, 'Batangas', 'Luzon', '2020-03-04 10:53:16', '2020-03-04 10:53:36'),
+	(25, 'Cavite', 'Luzon', '2020-03-04 10:53:16', '2020-03-04 10:53:36'),
+	(26, 'Laguna', 'Luzon', '2020-03-04 10:53:16', '2020-03-04 10:53:36'),
+	(27, 'Quezon', 'Luzon', '2020-03-04 10:53:16', '2020-03-04 10:53:36'),
+	(28, 'Rizal', 'Luzon', '2020-03-04 10:53:16', '2020-03-04 10:53:36'),
+	(29, 'Marinduque', 'Luzon', '2020-03-04 10:53:16', '2020-03-04 10:53:36'),
+	(30, 'Occidental Mindoro', 'Luzon', '2020-03-04 10:53:16', '2020-03-04 10:53:36'),
+	(31, 'Oriental Mindoro', 'Luzon', '2020-03-04 10:53:16', '2020-03-04 10:53:36'),
+	(32, 'Palawan', 'Luzon', '2020-03-04 10:53:16', '2020-03-04 10:53:36'),
+	(33, 'Romblon', 'Luzon', '2020-03-04 10:53:16', '2020-03-04 10:53:36'),
+	(34, 'Albay', 'Luzon', '2020-03-04 10:53:16', '2020-03-04 10:53:36'),
+	(35, 'Camarines Norte', 'Luzon', '2020-03-04 10:53:16', '2020-03-04 10:53:36'),
+	(36, 'Camarines Sur', 'Luzon', '2020-03-04 10:53:16', '2020-03-04 10:53:36'),
+	(37, 'Catanduanes', 'Luzon', '2020-03-04 10:53:16', '2020-03-04 10:53:36'),
+	(38, 'Masbate', 'Luzon', '2020-03-04 10:53:16', '2020-03-04 10:53:36'),
+	(39, 'Sorsogon', 'Luzon', '2020-03-04 10:53:16', '2020-03-04 10:53:36'),
+	(40, 'Aklan', 'Visayas', '2020-03-04 10:53:16', '2020-03-04 10:53:36'),
+	(41, 'Antique', 'Visayas', '2020-03-04 10:53:16', '2020-03-04 10:53:36'),
+	(42, 'Capiz', 'Visayas', '2020-03-04 10:53:16', '2020-03-04 10:53:36'),
+	(43, 'Guimaras', 'Visayas', '2020-03-04 10:53:16', '2020-03-04 10:53:36'),
+	(44, 'Iloilo', 'Visayas', '2020-03-04 10:53:16', '2020-03-04 10:53:36'),
+	(45, 'Negros Occidental', 'Visayas', '2020-03-04 10:53:16', '2020-03-04 10:53:36'),
+	(46, 'Bohol', 'Visayas', '2020-03-04 10:53:16', '2020-03-04 10:53:36'),
+	(47, 'Cebu', 'Visayas', '2020-03-04 10:53:16', '2020-03-04 10:53:36'),
+	(48, 'Negros Oriental', 'Visayas', '2020-03-04 10:53:16', '2020-03-04 10:53:36'),
+	(49, 'Siquijor', 'Visayas', '2020-03-04 10:53:16', '2020-03-04 10:53:36'),
+	(50, 'Biliran', 'Visayas', '2020-03-04 10:53:16', '2020-03-04 10:53:36'),
+	(51, 'Eastern Samar', 'Visayas', '2020-03-04 10:53:16', '2020-03-04 10:53:36'),
+	(52, 'Leyte', 'Visayas', '2020-03-04 10:53:16', '2020-03-04 10:53:36'),
+	(53, 'Northern Samar', 'Visayas', '2020-03-04 10:53:16', '2020-03-04 10:53:36'),
+	(54, 'Samar', 'Visayas', '2020-03-04 10:53:16', '2020-03-04 10:53:36'),
+	(55, 'Southern Leyte', 'Visayas', '2020-03-04 10:53:16', '2020-03-04 10:53:36'),
+	(56, 'Zamboanga del Norte', 'Mindanao', '2020-03-04 10:53:16', '2020-03-04 10:53:36'),
+	(57, 'Zamboanga del Sur', 'Mindanao', '2020-03-04 10:53:16', '2020-03-04 10:53:36'),
+	(58, 'Zamboanga Sibugay', 'Mindanao', '2020-03-04 10:53:16', '2020-03-04 10:53:36'),
+	(59, 'Bukidnon', 'Mindanao', '2020-03-04 10:53:16', '2020-03-04 10:53:36'),
+	(60, 'Camiguin', 'Mindanao', '2020-03-04 10:53:16', '2020-03-04 10:53:36'),
+	(61, 'Lanao del Norte', 'Mindanao', '2020-03-04 10:53:16', '2020-03-04 10:53:36'),
+	(62, 'Misamis Occidental', 'Mindanao', '2020-03-04 10:53:16', '2020-03-04 10:53:36'),
+	(63, 'Misamis Oriental', 'Mindanao', '2020-03-04 10:53:16', '2020-03-04 10:53:36'),
+	(64, 'Compostela Valley', 'Mindanao', '2020-03-04 10:53:16', '2020-03-04 10:53:36'),
+	(65, 'Davao del Norte', 'Mindanao', '2020-03-04 10:53:16', '2020-03-04 10:53:36'),
+	(66, 'Davao del Sur', 'Mindanao', '2020-03-04 10:53:16', '2020-03-04 10:53:36'),
+	(67, 'Davao Occidental', 'Mindanao', '2020-03-04 10:53:16', '2020-03-04 10:53:36'),
+	(68, 'Davao Oriental', 'Mindanao', '2020-03-04 10:53:16', '2020-03-04 10:53:36'),
+	(69, 'Cotabato', 'Mindanao', '2020-03-04 10:53:16', '2020-03-04 10:53:36'),
+	(70, 'Sarangani', 'Mindanao', '2020-03-04 10:53:16', '2020-03-04 10:53:36'),
+	(71, 'South Cotabato', 'Mindanao', '2020-03-04 10:53:16', '2020-03-04 10:53:36'),
+	(72, 'Sultan Kudarat', 'Mindanao', '2020-03-04 10:53:16', '2020-03-04 10:53:36'),
+	(73, 'Agusan del Norte', 'Mindanao', '2020-03-04 10:53:16', '2020-03-04 10:53:36'),
+	(74, 'Agusan del Sur', 'Mindanao', '2020-03-04 10:53:16', '2020-03-04 10:53:36'),
+	(75, 'Dinagat Islands', 'Mindanao', '2020-03-04 10:53:16', '2020-03-04 10:53:36'),
+	(76, 'Surigao del Norte', 'Mindanao', '2020-03-04 10:53:16', '2020-03-04 10:53:36'),
+	(77, 'Surigao del Sur', 'Mindanao', '2020-03-04 10:53:16', '2020-03-04 10:53:36'),
+	(78, 'Basilan', 'Mindanao', '2020-03-04 10:53:16', '2020-03-04 10:53:36'),
+	(79, 'Lanao del Sur', 'Mindanao', '2020-03-04 10:53:16', '2020-03-04 10:53:36'),
+	(80, 'Maguindanao', 'Mindanao', '2020-03-04 10:53:16', '2020-03-04 10:53:36'),
+	(81, 'Sulu', 'Mindanao', '2020-03-04 10:53:16', '2020-03-04 10:53:36'),
+	(82, 'Tawi-tawi', 'Mindanao', '2020-03-04 10:53:16', '2020-03-04 10:53:36');
 /*!40000 ALTER TABLE `province` ENABLE KEYS */;
 
 -- Dumping structure for table db_keyland.roles
@@ -2148,7 +2154,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 -- Dumping data for table db_keyland.users: ~8 rows (approximately)
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
 INSERT INTO `users` (`id`, `code`, `teamlead_id`, `is_teamlead`, `role_id`, `profile`, `email`, `password`, `fname`, `lname`, `phone`, `socialmedia`, `status`, `email_verified_at`, `is_approved`, `remember_token`, `created_at`, `updated_at`) VALUES
-	(1, '0000k3yLAnd', NULL, NULL, 1, '1578716015vIqzOHXj.jpg', 'admin@keylandrealty.com', '$2y$10$nE/mP9LiMiJh0pYM8T9LkubNgda20Z90HsBlTwuk767Crdxnt/RxW', 'Keyland', 'Realty', '0912435624859', 'https://www.facebook.com/keylandrealty.brokerage.7', 'active', NULL, 1, 'Y92BnxiCJ6WKxmq3691B6Iy00WJrSBVbdf7Pm1zsjeNzcgObhVve2x7BCf7L', '2019-12-23 12:35:25', '2020-01-19 04:20:12'),
+	(1, '0000k3yLAnd', NULL, NULL, 1, '1578716015vIqzOHXj.jpg', 'admin@keylandrealty.com', '$2y$10$nE/mP9LiMiJh0pYM8T9LkubNgda20Z90HsBlTwuk767Crdxnt/RxW', 'Keyland', 'Realty', '0912435624859', 'https://www.facebook.com/keylandrealty.brokerage.7', 'active', NULL, 1, 'cE9dMUcSQtTglw2LJLMn3SiUzXpJxjJRMoW0HKLTo7SrPAJe4teHlelgGXoO', '2019-12-23 12:35:25', '2020-01-19 04:20:12'),
 	(2, '00028IrA', NULL, 1, 2, '1577171955download.jpg', 'deliman200@gmail.com', '$2y$10$Kada3cjBFfvk8Bxp5Bo/8.n9GYdtRiC7thzByTqWrrofdrFaUGGiK', 'Joseph', 'Deliman', '09123456789', 'https://www.facebook.com/jojo', 'active', NULL, 1, 'DNPdmG7cZAYAKvDEE7T722Deo5yHp0VcoO2O6NzUX5U3lq3yDQiza4V7yF30', '2019-12-24 07:19:16', '2020-01-19 02:34:59'),
 	(3, '0003rlwZ', 5, NULL, 2, NULL, 'vince@gmail.com', '$2y$10$2zT4WtrgaNE0UIj7xEhSY.fglV1IL.3Br8YFvRhtnVOL39DxIUL7O', 'Vince', 'Quinaging', '09123456789', 'https://www.facebook.com/vince', 'inactive', NULL, 1, NULL, '2019-12-26 04:06:39', '2020-01-19 03:41:54'),
 	(4, '00049SLk', 2, NULL, 2, '1577671546dummy.jpg', 'dj.degamo.p@gmail.com', '$2y$10$nE/mP9LiMiJh0pYM8T9LkubNgda20Z90HsBlTwuk767Crdxnt/RxW', 'Dan', 'Degamo', '09223763288', 'https://www.facebook.com/dan', 'inactive', NULL, 1, 'l7zfg3izzxbkaHyPLZbuEDytvmtsPAPUQyOgqAn2HLvUvWq5YQ9CZBkFu8xz', '2019-12-29 10:33:44', '2020-01-19 03:25:48'),

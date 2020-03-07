@@ -138,7 +138,7 @@
 				</div>
 				<div class="col-md-4 col-sm-12">
 					<a href="{{ URL::to('properties?island=Mindanao') }}">
-						<img src="{{ asset('assets/img/img-bohol.jpg') }}" alt ="image manila" class="img-fluid"/>
+						<img src="{{ asset('assets/img/img-mindanao.jpg') }}" alt ="image manila" class="img-fluid"/>
 						<div class="middle">
 						   <p class="text-center mb-0">MINDANAO</p>
 						</div>
