@@ -37,8 +37,11 @@
 						  	</div>
 						  	<input class="form-control my-0 py-1 js-search-queue" list="home-queue" type="text" placeholder="Search by city or building" aria-label="Search" style="text-indent:25px; border-radius:5px;">
 						  	<datalist id="home-queue">
+						  		{{-- @foreach(App\Modules\Helpers::queue() as $queue)
+						    		<option value="{{ $queue->city_municipality }}"></option>
+						    	@endforeach --}}
 						    	@foreach(App\Modules\Helpers::queue() as $queue)
-						    		<option value="{{ $queue->city_municipality }}">{{ $queue->name }}</option>
+						    		<option value="{{ $queue->city_municipality }}">{{ $queue->city_municipality.' '.$queue->city_municipality.' '.$queue->name }}</option>
 						    	@endforeach
 						  	</datalist>
 						</div>
@@ -120,7 +123,7 @@
 		<div class="container">
 			<h1 class="text-center pb-3">Our Locations</h1>
 			<div class="row">
-				<div class="col-md-4 col-sm-12">
+				{{-- <div class="col-md-4 col-sm-12">
 					<a href="{{ URL::to('properties?island=Luzon') }}">
 						<img src="{{ asset('assets/img/img-manila.jpg') }}" alt ="image cebu" class="img-fluid"/>
 						<div class="middle">
@@ -141,6 +144,30 @@
 						<img src="{{ asset('assets/img/img-mindanao.jpg') }}" alt ="image manila" class="img-fluid"/>
 						<div class="middle">
 						   <p class="text-center mb-0">MINDANAO</p>
+						</div>
+					</a>
+				</div> --}}
+				<div class="col-md-4 col-sm-12">
+					<a href="{{ URL::to('properties?province=Cebu') }}">
+						<img src="{{ asset('assets/img/img-cebu.jpg') }}" alt ="image cebu" class="img-fluid"/>
+						<div class="middle">
+						   <p class="text-center">CEBU</p>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-4 col-sm-12">
+					<a href="{{ URL::to('properties?province=Bohol') }}">
+						<img src="{{ asset('assets/img/img-bohol.jpg') }}" alt ="image bohol" class="img-fluid"/>
+						<div class="middle">
+						   <p class="text-center">BOHOL</p>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-4 col-sm-12">
+					<a href="{{ URL::to('properties?province=Manila') }}">
+						<img src="{{ asset('assets/img/img-manila.jpg') }}" alt ="image manila" class="img-fluid"/>
+						<div class="middle">
+						   <p class="text-center mb-0">MANILA</p>
 						</div>
 					</a>
 				</div>

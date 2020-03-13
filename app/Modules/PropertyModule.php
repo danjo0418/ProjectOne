@@ -246,7 +246,8 @@ class PropertyModule
 
 	public function province()
 	{
-		return Province::select('province')->orderBy('province','ASC')->get();
+		// return Province::select('province')->orderBy('province','ASC')->get();
+		return Province::select('province')->whereIn('province', ['Cebu', 'Bohol'])->orderBy('province','ASC')->get();
 	}
 
 	public function findProvince($province_id)

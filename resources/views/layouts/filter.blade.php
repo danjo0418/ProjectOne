@@ -6,9 +6,12 @@
 					<div class="form-group s-input m-0 mr-1">
 						<input type="text" list="queue" value="{{ request()->get('city') }}" class="form-control" placeholder="Search by city or building" name="city">
 						<datalist id="queue">
-					    	@foreach(App\Modules\Helpers::queue() as $queue)
+					    	{{-- @foreach(App\Modules\Helpers::queue() as $queue)
 					    		<option value="{{ $queue->city_municipality }}"></option>
-					    	@endforeach
+					    	@endforeach --}}
+					    	@foreach(App\Modules\Helpers::queue() as $queue)
+						    	<option value="{{ $queue->city_municipality }}">{{ $queue->city_municipality.' '.$queue->city_municipality.' '.$queue->name }}</option>
+						    @endforeach
 					  	</datalist>
 					</div>
 					<div class="form-group s-button m-0">

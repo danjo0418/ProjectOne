@@ -29,7 +29,8 @@ Class Helpers {
 
 	public static function queue()
 	{
-		return Property::select('city_municipality')->groupBy('city_municipality')->get();
+		// return Property::select('city_municipality')->groupBy('city_municipality')->get();
+		return Property::select('city_municipality', 'province', 'name')->groupBy('city_municipality','province', 'name')->get();
 	}
 
 	public static function findTeamLead($id = null) 
@@ -44,7 +45,8 @@ Class Helpers {
 
 	public static function province()
 	{
-		return Province::orderBy('province','ASC')->get();
+		// return Province::orderBy('province','ASC')->get();
+		return Province::select('province')->whereIn('province', ['Cebu', 'Bohol'])->orderBy('province','ASC')->get();
 	}
 
 	public static function cities($province_name)
