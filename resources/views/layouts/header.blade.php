@@ -39,7 +39,8 @@
 			        </div>
 				</li>
 				<li class="nav-item">
-			      	<a class="nav-link" href="https://blog.keylandrealty.com" target="_blank">News and Updates</a>
+			      	{{-- <a class="nav-link" href="https://blog.keylandrealty.com" target="_blank">News and Updates</a> --}}
+			      	<a class="nav-link" href="{{ URL::to('news-and-updates') }}" target="_blank">News and Updates</a>
 				</li>
 				<li class="nav-item {{ in_array(request()->segment(1), $contact_url) ? 'active':''}}">
 			      	<a class="nav-link" href="{{ URL::to('contact-us') }}">Contact Us</a>

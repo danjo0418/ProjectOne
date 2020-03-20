@@ -55,6 +55,7 @@
 			<ul class="list-unstyled">
 				<li><a href="{{ URL::to('be-an-agent') }}">Be An Agent</a></li>
 				<li><a href="{{ URL::to('our-agents') }}">Our Agents</a></li>
+				{{-- <li><a href="https://blog.keylandrealty.com" target="_blank">News and Updates</a></li> --}}
 				<li><a href="{{ URL::to('news-and-updates') }}">News and Updates</a></li>
 				<li><a href="{{ URL::to('contact-us') }}">Contact Us</a></li>
 			</ul>
