@@ -71,35 +71,3 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 The Laravel framework is open-source software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
 
-## Credentials
-
-Facebook and Gmail 
----------------------------------------------------
-email: 2019keylandrealty@gmail.com
-password: Password!2019
-
-
-FTP
----------------------------------------------------
-Host: 85.187.128.19
-Username: dev@keylandrealty.com
-Password: Password!
-FTP server: keylandrealty.com
-FTP & explicit FTPS port:  21
-
-CPanel
----------------------------------------------------
-Link: https://wwwsg1-sr4.supercp.com:2083/
-Username: keylandrealty
-Password: Keylandrealty1!
-Email: hello@dmgwebsolutions.com
-
-
-DATABASE USER
----------------------------------------------------
-DB: keylandrealty_db
-Username: keylandrealty_admin
-Password: SH^p{,LJwG@4
-
-
-
